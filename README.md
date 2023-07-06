@@ -8,4 +8,7 @@
 
 # This repo also includes the necessary csv files under the Resources folders in each repected separate section.
 
+# I did reference this shared link from slack to help with the output to the txt file https://www.freecodecamp.org/news/file-handling-in-python/
+
+
 # Thank you!
