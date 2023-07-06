@@ -55,6 +55,26 @@ elif degette_votes > stockham_votes and degette_votes > doane_votes:
 elif doane_votes > stockham_votes and doane_votes > degette_votes:
     winner = "Raymon Anthony Doane"
 
+
+# Create the output txt file into the analysis folder
+output_folder = os.path.join('.', 'analysis')
+output_txtfile = os.path.join(output_folder, 'election_analysis.txt')
+
+# print analysis into txt file
+with open(output_txtfile, 'w') as file:
+    file.write("Election Results\n")
+    file.write("----------------------------\n")
+    file.write("Total Votes: " + str(total_votes) + "\n")
+    file.write("----------------------------\n")
+    file.write("Charles Casper Stockham: " + str(stockham_percentage) + str({stockham_votes}) + "\n")
+    file.write("Diana DeGette: " + str(degette_percentage) + str({degette_votes})+ "\n")
+    file.write("Raymon Anthony Doane: " + str(doane_percentage) + str ({doane_votes}) + "\n")
+    file.write("----------------------------\n")
+    file.write("Winner: " + str(winner)+ "\n")
+    file.write("----------------------------\n")
+
+
+# print analysis in terminal
 print("Election Results")
 print("----------------------------")
 print(f"Total Votes: {total_votes}")
